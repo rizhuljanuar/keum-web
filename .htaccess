@@ -1,0 +1,5 @@
+<IfModule mod_rewite.c>
+    RewiteEngine on
+    RewiteCond %{REQUEST_URI} !^public
+    RewiteRule ^(.*)$ public/$1 [L]
+</IfModule>
